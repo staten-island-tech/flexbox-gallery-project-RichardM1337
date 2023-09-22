@@ -25,7 +25,6 @@
         justify-content: center;
         margin-top:1.5rem 0rem;
         border-radius:50px;
-        background-color: rgba(255,0,0,0.5);
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         margin-bottom:25rem;
         transition: 0.3s ease-in-out;
@@ -33,26 +32,25 @@
         padding:20px;
     }
     .card:hover{
-        background-color: rgba(255,0,0,1);
         box-shadow: 0 5px 10px 0 rgba(0,0,0,0.8);
         transform:rotateX(180deg);
         transform-style: preserve-3d;
     }
     @keyframes rainbow{
         0%{
-            background-color: blue;
+            background-color: #AFB42B;
         }
         25%{
-            background-color: red;
+            background-color: #8BC34A;
         }
         50%{
-            background-color: purple;
+            background-color: #CDDC39;
         }
         75%{
-            background-color: yellowgreen;
+            background-color: #F0F4C3;
         }
         100%{
-            background-color: blue;
+            background-color: #AFB42B;
         }
     }
     .card-image{
@@ -68,3 +66,7 @@
         font-weight: 300;
         text-align: center;
     }
+#realsideshow{
+    width:150px;
+    height:150px;
+}
