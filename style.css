@@ -30,7 +30,7 @@
             box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4);
             margin-bottom: 25rem;
             transition: 0.3s ease-in-out;
-            animation: rainbow 3s infinite;
+            animation: grainbow 3s infinite;
             padding: 20px;
             
 
@@ -46,8 +46,28 @@
         .card:hover .card-title {
             transform: scale(1.1)
         }
-
-        @keyframes rainbow {
+        .card:hover .card-image{
+            animation: rotaterainbow 1s infinite;
+            transition: 0.3s ease-in-out;
+            width:370px;
+            height:370px;
+        }
+        @keyframes rotaterainbow{
+            0%{
+                filter:hue-rotate(0deg)
+            }
+            25%{
+                filter:hue-rotate(90deg)
+            }
+            50%{
+                filter:hue-rotate(180deg)
+            }
+            75%{
+                filter:hue-rotate(270deg)
+            }
+            100%{filter:hue-rotate(360deg)}
+        }
+        @keyframes grainbow {
             0% {
                 border: 20px solid #AFB42B;
             }
@@ -66,9 +86,10 @@
         }
 
         .card-image {
-            width: 95%;
-            height: 100%;
+            width: 350px;
+            height: 350px;
             border-radius: 25px;
+            transition: 0.25s ease-in-out
         }
 
         .card-title,
@@ -82,9 +103,4 @@
             font-size: 50px;
             font-weight: 300;
             text-align: center;
-        }
-
-        #realsideshow {
-            width: 150px;
-            height: 150px;
         }
