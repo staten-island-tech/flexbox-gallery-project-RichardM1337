@@ -1,106 +1,132 @@
-        * {
-            font-size: 10px;
-            /* rem size is relative to this number */
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            /* these 2 remove default margin and padding */
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
-        }
-
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            margin: 1rem auto;
-            align-items: stretch;
-        }
-
-        .card {
-            width: 23%;
-            /* vw = percent of the screen */
-            height: 23%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-top: 1.5rem 0rem;
-            border-radius: 50px;
-            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4);
-            margin-bottom: 25rem;
-            transition: 0.3s ease-in-out;
-            animation: grainbow 3s infinite;
-            padding: 20px;
-            
-
-        }
-
-        .card:hover {
-            border: 15px solid #82deff;
-            animation: none;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8)
-                /* horizontal, vertical, blur, spread */
-        }
-
-        .card:hover .card-title {
-            transform: scale(1.1)
-        }
-        .card:hover .card-image{
-            animation: rotaterainbow 1s infinite;
-            transition: 0.3s ease-in-out;
-            width:370px;
-            height:370px;
-        }
-        @keyframes rotaterainbow{
-            0%{
-                filter:hue-rotate(0deg)
-            }
-            25%{
-                filter:hue-rotate(90deg)
-            }
-            50%{
-                filter:hue-rotate(180deg)
-            }
-            75%{
-                filter:hue-rotate(270deg)
-            }
-            100%{filter:hue-rotate(360deg)}
-        }
-        @keyframes grainbow {
-            0% {
-                border: 20px solid #AFB42B;
+            * {
+                font-size: 10px;
+                /* rem size is relative to this number */
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                /* these 2 remove default margin and padding */
+                font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
             }
 
-            25% {
-                border: 20px solid #8BC34A;
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                margin: 1rem auto;
+                align-items: stretch;
             }
 
-            50% {
-                border: 20px solid #CDDC39;
+            .card {
+                width: 23%;
+                /* vw = percent of the screen */
+                height: 23%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 1.5rem 0rem;
+                border-radius: 50px;
+                box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4);
+                margin-bottom: 25rem;
+                transition: 0.3s ease-in-out;
+                animation: grainbow 3s infinite;
+                padding: 20px;
+                
+
             }
 
-            100% {
-                border: 20px solid #AFB42B;
+            .card:hover {
+                border: 15px solid #82deff;
+                animation: none;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8)
+                    /* horizontal, vertical, blur, spread */
             }
-        }
 
-        .card-image {
-            width: 350px;
-            height: 350px;
-            border-radius: 25px;
-            transition: 0.25s ease-in-out
-        }
+            .card:hover .card-title {
+                transform: scale(1.1)
+            }
+            .card:hover .card-image{
+                animation: rotaterainbow 1s infinite;
+                transition: 0.0001s ease-in-out;
+                transform: scale(1.1)
+            }
+            @keyframes rotaterainbow{
+                0%{
+                    filter:hue-rotate(0deg)
+                }
+                25%{
+                    filter:hue-rotate(90deg)
+                }
+                50%{
+                    filter:hue-rotate(180deg)
+                }
+                75%{
+                    filter:hue-rotate(270deg)
+                }
+                100%{filter:hue-rotate(360deg)}
+            }
+            @keyframes grainbow {
+                0% {
+                    border: 20px solid #AFB42B;
+                }
 
-        .card-title,
-        .card-text {
-            font-size: 25px;
-            transition: 300ms ease-in-out;
-            text-align: center;
-        }
+                25% {
+                    border: 20px solid #8BC34A;
+                }
 
-        .heading {
-            font-size: 50px;
-            font-weight: 300;
-            text-align: center;
-        }
+                50% {
+                    border: 20px solid #CDDC39;
+                }
+
+                100% {
+                    border: 20px solid #AFB42B;
+                }
+            }
+
+            .card-image {
+                width: 350px;
+                height: 350px;
+                border-radius: 25px;
+                transition: 0.25s ease-in-out
+            }
+
+            .card-title,
+            .card-text {
+                font-size: 25px;
+                transition: 300ms ease-in-out;
+                text-align: center;
+            }
+
+            .heading {
+                font-size: 50px;
+                font-weight: 300;
+                text-align: center;
+            }
+            @media screen and (max-width:1200px){
+                .card{
+                    width:49%
+                }
+                .card-image{
+                    width:85%;
+                    height: 85%;
+                }
+                .card-title{
+                    margin-top: 15px;
+                }
+                .card-title > :hover{
+                    content:none
+                }
+            }
+            @media screen and (max-width:900px){
+                .card{
+                    width:45%
+                }
+                .card-image{
+                    width: 75%;
+                    height:75%;
+                }
+            }
+            /* media biggest first to not apply higher sizes to lower screens */
+            /* @media screen and (min-width){} for building for mobile and then going to pc */
+            /*@media screen and (max-width){} for  building for pc ad then going to mobile */
