@@ -37,19 +37,19 @@
             }
 
             .card:hover {
-                border: 15px solid #82deff;
+                border: 20px solid #82deff;
                 animation: none;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8)
                     /* horizontal, vertical, blur, spread */
             }
 
             .card:hover .card-title {
-                transform: scale(1.1)
+                color:#027eab;
+                transform:scale(1.1);
             }
             .card:hover .card-image{
                 animation: rotaterainbow 1s infinite;
-                transition: 0.0001s ease-in-out;
-                transform: scale(1.1)
+                transition: 25ms ease-in-out;
             }
             @keyframes rotaterainbow{
                 0%{
@@ -118,9 +118,25 @@
                     content:none
                 }
             }
+            
             @media screen and (max-width:900px){
                 .card{
-                    width:45%
+                    width:43%
+                }
+                .card-image{
+                    width:85%;
+                    height: 85%;
+                }
+                .card-title{
+                    margin-top: 15px;
+                }
+                .card-title > :hover{
+                    content:none
+                }
+            }
+            @media screen and (max-width:600px){
+                .card{
+                    width:100%
                 }
                 .card-image{
                     width: 75%;
