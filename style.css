@@ -112,11 +112,11 @@
                     width:85%;
                     height: 85%;
                 }
-                .card-title{
-                    margin-top: 15px;
-                }
                 .card-title > :hover{
                     content:none
+                }
+                .card:hover{
+                    margin:10px;
                 }
             }
             
@@ -124,12 +124,12 @@
                 .card{
                     width:43%
                 }
+                .card:hover{
+                    margin:10px;
+                }
                 .card-image{
                     width:85%;
                     height: 85%;
-                }
-                .card-title{
-                    margin-top: 15px;
                 }
                 .card-title > :hover{
                     content:none
