@@ -39,7 +39,8 @@
             .card:hover {
                 border: 20px solid #82deff;
                 animation: none;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8)
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+                margin:50px;
                     /* horizontal, vertical, blur, spread */
             }
 
